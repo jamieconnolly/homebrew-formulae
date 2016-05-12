@@ -1,0 +1,27 @@
+language: objective-c
+matrix:
+  include:
+    - env: MACOS=10.11
+      os: osx
+      osx_image: xcode7.3
+      rvm: system
+    - env: MACOS=10.10
+      os: osx
+      osx_image: xcode7.1
+      rvm: system
+    - env: MACOS=10.9
+      os: osx
+      osx_image: beta-xcode6.2
+      rvm: system
+
+before_install:
+  - brew update || brew update
+
+install:
+  - mkdir -p $(brew --repo)/Library/Taps/jamieconnolly
+  - ln -s $PWD $(brew --repo)/Library/Taps/jamieconnolly/homebrew-formulae
+  - cd $(brew --repo)/Library/Taps/jamieconnolly/homebrew-formulae
+  - export TRAVIS_BUILD_DIR="$(brew --repo)/Library/Taps/jamieconnolly/homebrew-formulae"
+
+script:
+  - brew test-bot --no-bottle --skip-homebrew --tap=jamieconnolly/formulae
