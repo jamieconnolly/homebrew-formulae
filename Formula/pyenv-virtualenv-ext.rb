@@ -1,8 +1,8 @@
 class PyenvVirtualenvExt < Formula
   desc "Make pyenv transparently aware of a virtual environment"
   homepage "https://github.com/jamieconnolly/pyenv-virtualenv-ext"
-  url "https://github.com/jamieconnolly/pyenv-virtualenv-ext/archive/0.2.0.tar.gz"
-  sha256 "50ad2a103a58a27d663adf1a042ad36a0c565d051281d728a876e11d722945f5"
+  url "https://github.com/jamieconnolly/pyenv-virtualenv-ext/archive/0.3.0.tar.gz"
+  sha256 "5412fcf93abe8d2ad011d05343dbe4a4110ea42ae04c3a4e56e0f9e151fc3ff2"
 
   head "https://github.com/jamieconnolly/pyenv-virtualenv-ext.git"
 
@@ -17,7 +17,8 @@ class PyenvVirtualenvExt < Formula
   end
 
   test do
-    assert_match "virtualenv-ext.bash", shell_output("pyenv hooks which")
     assert_match "virtualenv-ext.bash", shell_output("pyenv hooks version-name")
+    assert_match "virtualenv-ext.bash", shell_output("pyenv hooks version-origin")
+    assert_match "virtualenv-ext.bash", shell_output("pyenv hooks which")
   end
 end
