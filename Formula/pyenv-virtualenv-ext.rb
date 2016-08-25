@@ -1,8 +1,8 @@
 class PyenvVirtualenvExt < Formula
   desc "Make pyenv transparently aware of a virtual environment"
   homepage "https://github.com/jamieconnolly/pyenv-virtualenv-ext"
-  url "https://github.com/jamieconnolly/pyenv-virtualenv-ext/archive/0.8.0.tar.gz"
-  sha256 "db8054972b79e897b3905733c503504436c421c318f6b81650d6aa0f4b9ce59f"
+  url "https://github.com/jamieconnolly/pyenv-virtualenv-ext/archive/0.9.0.tar.gz"
+  sha256 "e8ba418bd14c6349548f77a8f5ad7b3a63f3b3df640a9cb739ba32790e051d2f"
 
   head "https://github.com/jamieconnolly/pyenv-virtualenv-ext.git"
 
