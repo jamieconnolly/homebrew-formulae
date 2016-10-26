@@ -1,5 +1,5 @@
 class Handles < Formula
-  desc "My plain and docile robot buddy"
+  desc "My plain, docile robot buddy"
   homepage "https://github.com/jamieconnolly/handles"
   url "https://github.com/jamieconnolly/handles/archive/e5efe0604e73bc7ee11ccdcf5cdad6ecabc323c4.tar.gz"
   version "0.0.2"
@@ -14,11 +14,12 @@ class Handles < Formula
 
   def install
     ENV["GOPATH"] = buildpath
+    ENV["GLIDE_HOME"] = HOMEBREW_CACHE/"glide_home/#{name}"
     (buildpath/"src/github.com/jamieconnolly/handles").install buildpath.children
     cd "src/github.com/jamieconnolly/handles" do
       system "glide", "install"
       system "make", "build"
-      bin.install "bin/handles"
+      bin.install Dir["bin/*"]
       libexec.install Dir["libexec/*"]
       prefix.install_metafiles
     end

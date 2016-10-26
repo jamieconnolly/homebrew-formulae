@@ -20,6 +20,7 @@ brew install <formula>
 
 ## Available Formulae
 
+- [handles](https://github.com/jamieconnolly/handles)
 - [pyenv-virtualenv-ext](https://github.com/jamieconnolly/pyenv-virtualenv-ext)
 
 [build-status-image]: https://img.shields.io/travis/jamieconnolly/homebrew-formulae/master.svg
