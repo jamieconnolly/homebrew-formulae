@@ -1,17 +1,14 @@
 language: objective-c
 matrix:
   include:
-    - env: MACOS=10.11
-      os: osx
+    - os: osx
+      osx_image: xcode8
+      rvm: system
+    - os: osx
       osx_image: xcode7.3
       rvm: system
-    - env: MACOS=10.10
-      os: osx
-      osx_image: xcode7.1
-      rvm: system
-    - env: MACOS=10.9
-      os: osx
-      osx_image: beta-xcode6.2
+    - os: osx
+      osx_image: xcode6.4
       rvm: system
 
 before_install:
