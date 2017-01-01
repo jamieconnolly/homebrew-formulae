@@ -1,8 +1,8 @@
 class Handles < Formula
   desc "My plain, docile robot buddy"
   homepage "https://github.com/jamieconnolly/handles"
-  url "https://github.com/jamieconnolly/handles/archive/v1.tar.gz"
-  sha256 "960e9c65d7602553c8be641eef69bd60ee2c5db3c602c41ca72481c71f63b60a"
+  url "https://github.com/jamieconnolly/handles/archive/v2.tar.gz"
+  sha256 "bb2b764cec1359e3f43e879e2f5152943c321185e1bb356533d1c59bca5f24b2"
 
   head "https://github.com/jamieconnolly/handles.git"
 
@@ -24,6 +24,13 @@ class Handles < Formula
       libexec.install Dir["libexec/*"]
       prefix.install_metafiles
     end
+  end
+
+  def caveats; <<-EOS.undent
+    In order to use Handles, please add the following to your $SHELL:
+      export GITHUB_USER="<Your GitHub username>"
+      export PROJECTS_HOME="<Path to your projects folder>"
+    EOS
   end
 
   test do
