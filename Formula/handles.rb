@@ -1,23 +1,22 @@
 class Handles < Formula
   desc "My plain, docile robot buddy"
   homepage "https://github.com/jamieconnolly/handles"
-  url "https://github.com/jamieconnolly/handles/archive/v5.tar.gz"
-  sha256 "fcb32d14c3a93364ceadbe6bb273064a5694769d4ce1ff9255c85c73a568fe8c"
+  url "https://github.com/jamieconnolly/handles/archive/v6.tar.gz"
+  sha256 "c31415ce196c7200712a7597b6a65e2cc8c98963e9ab733300743eb9175c8812"
 
   head "https://github.com/jamieconnolly/handles.git"
 
   bottle :unneeded
 
-  depends_on "glide" => :build
   depends_on "go" => :build
 
   def install
     ENV["GOPATH"] = buildpath
-    ENV["GLIDE_HOME"] = HOMEBREW_CACHE/"glide_home/#{name}"
+    ENV["GOOS"] = "darwin"
+    ENV["GOARCH"] = MacOS.prefer_64_bit? ? "amd64" : "386"
 
     (buildpath/"src/github.com/jamieconnolly/handles").install buildpath.children
     cd "src/github.com/jamieconnolly/handles" do
-      system "glide", "install"
       system "make", "build", "VERSION=#{version}"
 
       bin.install Dir["bin/*"]
