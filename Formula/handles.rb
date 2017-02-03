@@ -1,12 +1,14 @@
 class Handles < Formula
   desc "My plain, docile robot buddy"
   homepage "https://github.com/jamieconnolly/handles"
-  url "https://github.com/jamieconnolly/handles/archive/v7.tar.gz"
-  sha256 "4e771d62da29d42a3fb33190cce67a66d059a16b7f48790ecf42d2c0ba9e2a03"
+  url "https://github.com/jamieconnolly/handles/archive/v8.tar.gz"
+  sha256 "a33d22069dabfcd21f03e9bf4abaaf76efd6a159e0fbfa37fb20d26fccfaf243"
 
   head "https://github.com/jamieconnolly/handles.git"
 
   bottle :unneeded
+
+  option "without-completions", "Disable bash/zsh completions"
 
   depends_on "go" => :build
 
@@ -22,6 +24,10 @@ class Handles < Formula
       bin.install Dir["bin/*"]
       libexec.install Dir["libexec/*"]
       prefix.install_metafiles
+
+      if build.with? "completions"
+        zsh_completion.install "completions/handles.zsh" => "_handles"
+      end
     end
   end
 
