@@ -1,21 +1,19 @@
 # Homebrew Formulae
 
-[![build-status-image]][travis-ci]
+[![Build Status][build-status-image]][build-status-url]
 
-My own personal [Homebrew](http://brew.sh) formulae.
+My personal [Homebrew](http://brew.sh/) formulae.
+
+## Installation
+
+```
+$ brew tap jamieconnolly/formulae
+```
 
 ## Usage
 
-You'll want to tap this repository:
-
-```console
-brew tap jamieconnolly/formulae
 ```
-
-And now you can install any of the formulae:
-
-```console
-brew install <formula>
+$ brew install <formula>
 ```
 
 ## Available Formulae
@@ -23,5 +21,5 @@ brew install <formula>
 - [handles](https://github.com/jamieconnolly/handles)
 - [pyenv-virtualenv-ext](https://github.com/jamieconnolly/pyenv-virtualenv-ext)
 
-[build-status-image]: https://img.shields.io/travis/jamieconnolly/homebrew-formulae/master.svg
-[travis-ci]: https://travis-ci.org/jamieconnolly/homebrew-formulae
+[build-status-image]: https://api.travis-ci.org/jamieconnolly/homebrew-formulae.svg?branch=master
+[build-status-url]: https://travis-ci.org/jamieconnolly/homebrew-formulae
