@@ -16,10 +16,14 @@ $ brew tap jamieconnolly/formulae
 $ brew install <formula>
 ```
 
-## Available Formulae
+## Formulae
 
 - [handles](https://github.com/jamieconnolly/handles)
 - [pyenv-virtualenv-ext](https://github.com/jamieconnolly/pyenv-virtualenv-ext)
+
+## Documentation
+
+`brew help`, `man brew` or check [Homebrew's documentation](http://docs.brew.sh/).
 
 [build-status-image]: https://api.travis-ci.org/jamieconnolly/homebrew-formulae.svg?branch=master
 [build-status-url]: https://travis-ci.org/jamieconnolly/homebrew-formulae
