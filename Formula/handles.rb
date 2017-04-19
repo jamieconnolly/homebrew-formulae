@@ -1,8 +1,8 @@
 class Handles < Formula
   desc "My plain, docile robot buddy"
   homepage "https://github.com/jamieconnolly/handles"
-  url "https://github.com/jamieconnolly/handles/archive/v12.tar.gz"
-  sha256 "36bb8496a6395db14842cf99f176db83f75bf31b6305f352dffb3dff5135d0a3"
+  url "https://github.com/jamieconnolly/handles/archive/v13.tar.gz"
+  sha256 "53c9793dc95417827b2dc49606a9a72cca872fe1581989d56c8b2ec54d61ade2"
 
   head "https://github.com/jamieconnolly/handles.git"
 
@@ -34,7 +34,7 @@ class Handles < Formula
   def caveats; <<-EOS.undent
     In order to use Handles, please add the following to your $SHELL:
       export GITHUB_USER="<Your GitHub username>"
-      export PROJECTS_HOME="<Path to your projects folder>"
+      export PROJECT_HOME="<Path to your projects folder>"
     EOS
   end
 
