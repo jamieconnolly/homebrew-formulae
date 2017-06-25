@@ -10,7 +10,6 @@ class Handles < Formula
 
   option "without-completions", "Disable bash/zsh completions"
 
-  depends_on "git"
   depends_on "go" => :build
 
   def install
