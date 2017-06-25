@@ -1,8 +1,8 @@
 class Handles < Formula
   desc "My plain, docile robot buddy"
   homepage "https://github.com/jamieconnolly/handles"
-  url "https://github.com/jamieconnolly/handles/archive/v13.tar.gz"
-  sha256 "53c9793dc95417827b2dc49606a9a72cca872fe1581989d56c8b2ec54d61ade2"
+  url "https://github.com/jamieconnolly/handles/archive/v14.tar.gz"
+  sha256 "b3af176c50d1222a52bf9f3fa6b60474211a98087bd684b30251757988b81036"
 
   head "https://github.com/jamieconnolly/handles.git"
 
@@ -10,6 +10,7 @@ class Handles < Formula
 
   option "without-completions", "Disable bash/zsh completions"
 
+  depends_on "git"
   depends_on "go" => :build
 
   def install
