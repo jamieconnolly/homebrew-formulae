@@ -1,8 +1,8 @@
 class Handles < Formula
   desc "My plain, docile robot buddy"
   homepage "https://github.com/jamieconnolly/handles"
-  url "https://github.com/jamieconnolly/handles/archive/v14.tar.gz"
-  sha256 "b3af176c50d1222a52bf9f3fa6b60474211a98087bd684b30251757988b81036"
+  url "https://github.com/jamieconnolly/handles/archive/v15.tar.gz"
+  sha256 "a8fbe37566596fbdefeca289aa2b829d1f9699aca78fd357ed8a9ac615727121"
 
   head "https://github.com/jamieconnolly/handles.git"
 
@@ -10,7 +10,14 @@ class Handles < Formula
 
   option "without-completions", "Disable bash/zsh completions"
 
-  depends_on "go" => :build
+  depends_on "forego" => :run
+  depends_on "glide" => :run
+  depends_on "go" => [:run, :build]
+  depends_on "hub" => :run
+  depends_on "nodenv" => :run
+  depends_on "pyenv" => :run
+  depends_on "rbenv" => :run
+  depends_on "yarn" => :run
 
   def install
     ENV["GOPATH"] = buildpath
