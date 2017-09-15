@@ -16,7 +16,7 @@ class Handles < Formula
   depends_on "nodenv" => :run
   depends_on "pyenv" => :run
   depends_on "rbenv" => :run
-  depends_on "yarn" => [:run, "without-node"]
+  depends_on "yarn" => :run
 
   def install
     ENV["GOPATH"] = buildpath
