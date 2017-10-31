@@ -1,8 +1,8 @@
 class Handles < Formula
   desc "My plain, docile robot buddy"
   homepage "https://github.com/jamieconnolly/handles"
-  url "https://github.com/jamieconnolly/handles/archive/v18.tar.gz"
-  sha256 "0cfb0d78b1b3d0a365e0d99d49a7304856c78b01318937d887194baea4155275"
+  url "https://github.com/jamieconnolly/handles/archive/v19.tar.gz"
+  sha256 "b519450fd4dee81e6164f2279a5a862735ba0eb5dd403bf532aa3f14807fd0c6"
 
   head "https://github.com/jamieconnolly/handles.git"
 
@@ -14,6 +14,7 @@ class Handles < Formula
   depends_on "forego" => :run
   depends_on "goenv" => :run
   depends_on "nodenv" => :run
+  depends_on "pipenv" => :run
   depends_on "pyenv" => :run
   depends_on "rbenv" => :run
   depends_on "yarn" => :run
@@ -39,7 +40,6 @@ class Handles < Formula
 
   def caveats; <<-EOS.undent
     In order to use Handles, please add the following to your $SHELL:
-      export GITHUB_USER="<Your GitHub username>"
       export PROJECT_HOME="<Path to your projects folder>"
     EOS
   end
