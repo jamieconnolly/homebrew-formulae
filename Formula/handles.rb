@@ -38,7 +38,7 @@ class Handles < Formula
     end
   end
 
-  def caveats; <<-EOS.undent
+  def caveats; <<~EOS
     In order to use Handles, please add the following to your $SHELL:
       export PROJECT_HOME="<Path to your projects folder>"
     EOS
