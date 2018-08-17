@@ -10,14 +10,14 @@ class Handles < Formula
 
   depends_on "go" => :build
 
-  depends_on "dep" => :run
-  depends_on "forego" => :run
-  depends_on "goenv" => :run
-  depends_on "nodenv" => :run
-  depends_on "pipenv" => :run
-  depends_on "pyenv" => :run
-  depends_on "rbenv" => :run
-  depends_on "yarn" => :run
+  depends_on "dep"
+  depends_on "forego"
+  depends_on "goenv"
+  depends_on "nodenv"
+  depends_on "pipenv"
+  depends_on "pyenv"
+  depends_on "rbenv"
+  depends_on "yarn"
 
   def install
     ENV["GOPATH"] = buildpath
