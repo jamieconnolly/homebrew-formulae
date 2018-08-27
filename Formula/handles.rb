@@ -1,8 +1,8 @@
 class Handles < Formula
   desc "My plain, docile robot buddy"
   homepage "https://github.com/jamieconnolly/handles"
-  url "https://github.com/jamieconnolly/handles/archive/v22.tar.gz"
-  sha256 "c204a9b28ce521dee8a0cb87244857dd1a4ebb81650ee0fb90cf09702293258f"
+  url "https://github.com/jamieconnolly/handles/archive/v23.tar.gz"
+  sha256 "792a39edc52fb9f80e402aa7f56a4056d7b33cccb53a381978d6209983cdc15c"
 
   head "https://github.com/jamieconnolly/handles.git"
 
@@ -10,7 +10,6 @@ class Handles < Formula
 
   depends_on "go" => :build
 
-  depends_on "dep"
   depends_on "forego"
   depends_on "goenv"
   depends_on "nodenv"
@@ -20,12 +19,14 @@ class Handles < Formula
   depends_on "yarn"
 
   def install
+    ENV["GO111MODULE"] = "on"
     ENV["GOPATH"] = buildpath
     ENV["GOOS"] = "darwin"
     ENV["GOARCH"] = MacOS.prefer_64_bit? ? "amd64" : "386"
 
     (buildpath/"src/github.com/jamieconnolly/handles").install buildpath.children
     cd "src/github.com/jamieconnolly/handles" do
+      system "make", "deps"
       system "make", "build", "VERSION=#{version}"
 
       bin.install Dir["bin/*"]
