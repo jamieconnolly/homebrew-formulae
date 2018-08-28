@@ -1,8 +1,8 @@
 class Handles < Formula
   desc "My plain, docile robot buddy"
   homepage "https://github.com/jamieconnolly/handles"
-  url "https://github.com/jamieconnolly/handles/archive/v23.tar.gz"
-  sha256 "792a39edc52fb9f80e402aa7f56a4056d7b33cccb53a381978d6209983cdc15c"
+  url "https://github.com/jamieconnolly/handles/archive/v24.tar.gz"
+  sha256 "8553a465180ed12a7f265cadc158681f96ef5a1382f119b73b236ca482585a94"
 
   head "https://github.com/jamieconnolly/handles.git"
 
@@ -12,6 +12,7 @@ class Handles < Formula
 
   depends_on "forego"
   depends_on "goenv"
+  depends_on "hub"
   depends_on "nodenv"
   depends_on "pipenv"
   depends_on "pyenv"
