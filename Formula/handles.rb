@@ -1,8 +1,8 @@
 class Handles < Formula
   desc "My plain, docile robot buddy"
   homepage "https://github.com/jamieconnolly/handles"
-  url "https://github.com/jamieconnolly/handles/archive/v24.tar.gz"
-  sha256 "8553a465180ed12a7f265cadc158681f96ef5a1382f119b73b236ca482585a94"
+  url "https://github.com/jamieconnolly/handles/archive/v25.tar.gz"
+  sha256 "0b0e34931a07c01ab64a90a0ec77d1e7ff410842f5aa59742a0dc57c6530de4c"
 
   head "https://github.com/jamieconnolly/handles.git"
 
