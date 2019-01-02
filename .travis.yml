@@ -1,6 +1,8 @@
 language: ruby
-os: osx
 rvm: system
+
+os: osx
+osx_image: xcode10.1
 
 before_install:
   - export TRAVIS_COMMIT="$(git rev-parse --verify -q HEAD)"
