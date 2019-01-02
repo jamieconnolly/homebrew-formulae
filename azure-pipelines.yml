@@ -7,8 +7,8 @@ pool:
 steps:
   - bash: |
       sudo xcode-select --switch /Applications/Xcode_10.app/Contents/Developer
-      brew update
-      HOMEBREW_TAP_DIR="/usr/local/Homebrew/Library/Taps/#{tap}"
+      brew update-reset /usr/local/Homebrew
+      HOMEBREW_TAP_DIR="/usr/local/Homebrew/Library/Taps/jamieconnolly/homebrew-formulae"
       mkdir -p "$HOMEBREW_TAP_DIR"
       rm -rf "$HOMEBREW_TAP_DIR"
       ln -s "$PWD" "$HOMEBREW_TAP_DIR"
