@@ -25,5 +25,5 @@ $ brew install <formula>
 
 `brew help`, `man brew` or check [Homebrew's documentation](http://docs.brew.sh/).
 
-[build-status-image]: https://api.travis-ci.org/jamieconnolly/homebrew-formulae.svg?branch=master
-[build-status-url]: https://travis-ci.org/jamieconnolly/homebrew-formulae
+[build-status-image]: https://img.shields.io/azure-devops/build/jamieconnolly/homebrew/homebrew-formulae/master.svg
+[build-status-url]: https://dev.azure.com/jamieconnolly/homebrew/_build/latest?definitionId=homebrew-formulae
