@@ -10,21 +10,8 @@ class Handles < Formula
 
   depends_on "go" => :build
 
-  depends_on "forego"
-  depends_on "goenv"
-  depends_on "hub"
-  depends_on "nodenv"
-  depends_on "pipenv"
-  depends_on "pyenv"
-  depends_on "rbenv"
-  depends_on "yarn"
-
   def install
-    ENV["GO111MODULE"] = "on"
     ENV["GOPATH"] = buildpath
-    ENV["GOOS"] = "darwin"
-    ENV["GOARCH"] = MacOS.prefer_64_bit? ? "amd64" : "386"
-
     (buildpath/"src/github.com/jamieconnolly/handles").install buildpath.children
     cd "src/github.com/jamieconnolly/handles" do
       system "make", "deps"
