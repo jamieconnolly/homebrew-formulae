@@ -2,7 +2,7 @@ trigger:
   - master
 
 pool:
-  vmImage: macos10.13
+  vmImage: macos-10.13
 
 steps:
   - bash: |
